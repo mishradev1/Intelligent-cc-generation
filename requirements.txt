@@ -1,0 +1,20 @@
+# Core dependencies
+moviepy>=1.0.3
+numpy>=1.24.0
+
+# Audio/Video processing
+librosa>=0.10.0
+soundfile>=0.12.0
+opencv-python>=4.8.0
+
+# ML Models
+tensorflow>=2.13.0
+tensorflow-hub>=0.14.0
+mediapipe>=0.10.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Utilities
+pydub>=0.25.1
