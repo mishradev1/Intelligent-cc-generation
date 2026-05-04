@@ -1,8 +1,8 @@
-# 🎬 Intelligent Closed Caption (CC) Suggestion Tool
+# Intelligent Closed Caption (CC) Suggestion Tool
 
 An AI-powered tool that intelligently identifies moments in a video where a Closed Caption (CC) annotation is genuinely necessary — such as when a non-speech audio event meaningfully affects the speakers or the scene — and suggests contextually relevant CC text, without over-captioning routine or low-impact sounds.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────┐    ┌──────────────────┐    ┌──────────────────────┐
@@ -34,14 +34,14 @@ An AI-powered tool that intelligently identifies moments in a video where a Clos
                             └─────────────────┘
 ```
 
-## ✨ Features
+## Features
 
 - **Sound Event Detection** — Automatically detects and classifies non-speech audio events (honking, explosions, laughter, music, alarms, applause, etc.) with confidence scores and timestamps using YAMNet.
 - **Speaker Reaction Detection** — Analyzes video frames at detected event timestamps using MediaPipe to identify visible reactions (head turns, startled body language, facial expressions).
 - **Intelligent CC Decisions** — Combines audio and visual signals to determine whether a CC annotation is truly warranted, avoiding over-captioning of ambient sounds.
 - **SRT Output** — Generates standard SRT subtitle files with properly formatted timestamps and descriptive CC labels like `[honking]`, `[crowd cheering]`, `[gunshot]`.
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Python 3.9+**
 - **FFmpeg** — Must be installed and available on your system PATH
@@ -49,7 +49,7 @@ An AI-powered tool that intelligently identifies moments in a video where a Clos
   - macOS: `brew install ffmpeg`
   - Linux: `sudo apt install ffmpeg`
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -90,13 +90,13 @@ print(f"Audio saved to: {audio_path}")
 python -m src.cli --input video.mp4 --output captions.srt
 ```
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 pytest tests/ -v
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Intelligent-cc-generation/
@@ -133,7 +133,7 @@ Intelligent-cc-generation/
 └── README.md
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -144,14 +144,7 @@ Intelligent-cc-generation/
 | Audio Extraction | [FFmpeg](https://ffmpeg.org/) via moviepy |
 | Output Format | SRT (SubRip Subtitle) |
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feat/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feat/your-feature`)
-5. Open a Pull Request
-
-## 📄 License
+## License
 
 This project is part of the [Planet Read](https://www.planetread.org/) initiative under the DMP 2026 program.
